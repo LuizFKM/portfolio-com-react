@@ -1,15 +1,20 @@
+import React from 'react';
 import Paragrafo from "../Paragrafo";
 import Titulo from "../Titulo";
-
 import { Card, LinkBotao } from "./styles";
 
+interface ProjetoProps {
+  name: string;
+  description: string | null;
+  url: string;
+}
 
-const Projeto = () => (
+const Projeto: React.FC<ProjetoProps> = ({ name, description, url }) => (
   <Card>
-    <Titulo>Lista de tarefas</Titulo>
-    <Paragrafo tipo="secundario">Lista de tarefas feita com VueJS</Paragrafo>
-    <LinkBotao>Visualizar</LinkBotao>
+    <Titulo>{name}</Titulo>
+    <Paragrafo tipo="secundario">{description || 'Descrição não disponível'}</Paragrafo>
+    <LinkBotao href={url} target="_blank" rel="noopener noreferrer">Visualizar</LinkBotao>
   </Card>
-)
+);
 
-export default Projeto
+export default Projeto;
