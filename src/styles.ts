@@ -5,7 +5,8 @@ const EstiloGlobal = createGlobalStyle`
   *{
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif
+  font-family: 'Inter', sans-serif;
+  list-style: none;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
   background-color: #f0f0f0;
 
   @media (max-width: 768px){
-    padding-top: 16px
+    padding-top: 16px;
   }
 }
 `
