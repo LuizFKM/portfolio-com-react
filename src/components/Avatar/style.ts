@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const FotoPerfil = styled.img`
-  max-width: 100%;
-  border-radius: 50%;
-  margin-bottom: 24px
+  width: 128px;
+  height: 128px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px, solid ${props => props.theme.corDaBordaImg}
 `
